@@ -1,23 +1,23 @@
-import {Component, Directive} from '@angular/core';
+import {Component, Directive, Input} from '@angular/core';
 
 @Component({
     selector:'[tooltip]',
-    template: `<div id="tooltip" class="glyphicon glyphicon-question-sign">
-    <span class="tooltiptext">{{tooltipText}}</span>
-    </div>`,
+    templateUrl: 'app/tooltip.component.html',
     styleUrls: ['app/tooltip.css'],
        host:{
         '(blur)': 'onBlur()',
         '(click)':'onClick()'
-    }
+    },
 })
 export class TooltipComponent {
-    tooltipText;
+   @Input() textIn:string;
+
+    tooltipText; 
   
     onBlur() {
         this.tooltipText='';
     }
     onClick() {
-        this.tooltipText='onClicktttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt';
+        this.tooltipText= this.textIn;
     }
 }

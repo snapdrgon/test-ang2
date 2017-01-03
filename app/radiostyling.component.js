@@ -9,32 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var TooltipComponent = (function () {
-    function TooltipComponent() {
+var RadioStylingComponent = (function () {
+    function RadioStylingComponent() {
+        this.isChecked = [1, 3, 5, 7];
     }
-    TooltipComponent.prototype.onBlur = function () {
-        this.tooltipText = '';
-    };
-    TooltipComponent.prototype.onClick = function () {
-        this.tooltipText = this.textIn;
-    };
-    return TooltipComponent;
+    return RadioStylingComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], TooltipComponent.prototype, "textIn", void 0);
-TooltipComponent = __decorate([
+RadioStylingComponent = __decorate([
     core_1.Component({
-        selector: '[tooltip]',
-        templateUrl: 'app/tooltip.component.html',
-        styleUrls: ['app/tooltip.css'],
-        host: {
-            '(blur)': 'onBlur()',
-            '(click)': 'onClick()'
-        },
+        selector: 'radio-styling',
+        templateUrl: 'app/radiostyling.component.html',
+        styleUrls: ['app/radiostyling.component.css']
     }),
     __metadata("design:paramtypes", [])
-], TooltipComponent);
-exports.TooltipComponent = TooltipComponent;
-//# sourceMappingURL=tooltip.component.js.map
+], RadioStylingComponent);
+exports.RadioStylingComponent = RadioStylingComponent;
+//# sourceMappingURL=radiostyling.component.js.map

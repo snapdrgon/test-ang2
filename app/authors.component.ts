@@ -5,7 +5,7 @@ import {AuthorService} from './author.service';
     template: `<h2>Authors</h2>
     {{title}}
     <ul>
-    <li *ngFor="let author of authors">{{author}}</li>
+    <li *ngFor="let author of authors" >{{author}}<div class="toolPos" tooltip textIn='{{author}}'></div></li>
     </ul>
     `
 })

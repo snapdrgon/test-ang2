@@ -11,12 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+var forms_1 = require("@angular/forms");
 var courses_component_1 = require("./courses.component");
 var authors_component_1 = require("./authors.component");
 var course_service_1 = require("./course.service");
 var author_service_1 = require("./author.service");
 var auto_grow_directive_1 = require("./auto-grow.directive");
 var tooltip_component_1 = require("./tooltip.component");
+var radiostyling_component_1 = require("./radiostyling.component");
+//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,8 +27,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, auto_grow_directive_1.AutoGrowDirective, tooltip_component_1.TooltipComponent],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+        declarations: [app_component_1.AppComponent, courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, auto_grow_directive_1.AutoGrowDirective, tooltip_component_1.TooltipComponent, radiostyling_component_1.RadioStylingComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [course_service_1.CourseService, author_service_1.AuthorService],
     }),
